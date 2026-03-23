@@ -24,6 +24,5 @@ pydantic-settings==2.6.1
 
 # Database
 psycopg2-binary>=2.9.0
-oracledb>=2.0.0  # Deprecated - migrated to PostgreSQL
 sqlalchemy>=2.0.0
 alembic>=1.13.0
