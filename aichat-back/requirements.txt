@@ -1,0 +1,29 @@
+# FastAPI and server
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.18
+
+# Authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.1
+
+# AWS SDK
+boto3==1.35.75
+botocore==1.35.75
+
+# CORS
+fastapi-cors==0.0.6
+
+# Logging
+watchtower==3.3.1
+
+# Utilities
+pydantic==2.10.3
+pydantic-settings==2.6.1
+
+# Database
+psycopg2-binary>=2.9.0
+oracledb>=2.0.0  # Deprecated - migrated to PostgreSQL
+sqlalchemy>=2.0.0
+alembic>=1.13.0

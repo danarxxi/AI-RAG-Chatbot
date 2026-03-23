@@ -1,0 +1,18 @@
+# SystemD service for RAG Chatbot Backend
+# Deploy to: /etc/systemd/system/rag-chatbot-backend.service
+
+[Unit]
+Description=RAG Chatbot Backend (FastAPI)
+After=network.target
+
+[Service]
+Type=simple
+User=ec2-user
+WorkingDirectory=/opt/rag-chatbot/backend
+Environment="PATH=/opt/rag-chatbot/venv/bin"
+ExecStart=/opt/rag-chatbot/venv/bin/python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
